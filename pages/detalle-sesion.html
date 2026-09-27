@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f6" />
+    <title>Detalle de sesión · Flowcus</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body class="app-page session-detail-page">
+    <section class="workspace">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">FLOWCUS</a>
+        <nav class="side-nav" aria-label="Navegación principal">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="tareas.html">Tareas</a>
+          <a class="selected" href="planificacion.html">Planificación</a>
+          <a href="#">Progreso</a>
+        </nav>
+        <div class="daily-goal">
+          <div><strong>OBJETIVO DIARIO</strong><strong>3/5 H</strong></div>
+          <span><i></i></span>
+        </div>
+        <button class="logout-button" type="button" id="logout">
+          ▷ CERRAR SESIÓN
+        </button>
+      </aside>
+      <main class="app-main">
+        <section class="session-view">
+          <div class="profile-status" aria-label="Perfil activo">
+            <span class="profile-avatar" aria-hidden="true"></span
+            ><span>Perfil<br /><strong>ACTIVO</strong></span>
+          </div>
+
+          <p class="session-crumbs">
+            <a href="planificacion.html">Planificación</a> › Detalle de sesión
+            #TSK-8821
+          </p>
+
+          <div class="session-header-row">
+            <div>
+              <div class="session-top-badges">
+                <span class="view-pill">● Programada para hoy 11:00 AM</span>
+                <span class="estimate">Duración estimada: 1h 55m</span>
+              </div>
+              <p class="view-eyebrow">Deep work block · Enfoque crítico</p>
+              <h1>Sesión de Enfoque Profundo</h1>
+              <p>
+                Bloque dedicado a diseño de interfaz y revisión de componentes.
+              </p>
+            </div>
+            <div class="countdown-box">
+              <span>Cuenta regresiva</span>
+              <strong>00:34:12</strong>
+            </div>
+          </div>
+
+          <div class="session-layout">
+            <div class="session-main">
+              <div class="section-block">
+                <h2>
+                  Estructura de intervalos
+                  <span class="tag tag-neutral" style="margin-left: auto"
+                    >115 min totales</span
+                  >
+                </h2>
+                <div class="interval-row">
+                  <div class="interval-block">
+                    <strong>B1</strong><span>25m Foco</span>
+                  </div>
+                  <div class="interval-block rest">
+                    <strong>D1</strong><span>5m Pausa</span>
+                  </div>
+                  <div class="interval-block">
+                    <strong>B2</strong><span>25m Foco</span>
+                  </div>
+                  <div class="interval-block rest">
+                    <strong>D2</strong><span>5m Pausa</span>
+                  </div>
+                  <div class="interval-block">
+                    <strong>B3</strong><span>25m Foco</span>
+                  </div>
+                  <div class="interval-block rest">
+                    <strong>D3</strong><span>5m Pausa</span>
+                  </div>
+                  <div class="interval-block current">
+                    <strong>B4</strong><span>25m Foco</span>
+                  </div>
+                </div>
+                <div class="metric-row">
+                  <div>
+                    <span>TIEMPO DE FOCO NETO</span><strong>100 min</strong>
+                  </div>
+                  <div>
+                    <span>PAUSAS TÁCTICAS</span
+                    ><strong>3 descansos (15m)</strong>
+                  </div>
+                  <div>
+                    <span>RENDIMIENTO PROYECTADO</span
+                    ><strong>+94% flujo</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-block">
+                <h2>Tarea primaria vinculada</h2>
+                <div class="linked-task">
+                  <div class="linked-top"><span>ID: #TSK-8821</span></div>
+                  <h3>Diseño del sistema de componentes</h3>
+                  <div class="checklist-progress-row">
+                    <span>PROGRESO DE CHECKLIST</span
+                    ><span>2 de 4 completadas (50%)</span>
+                  </div>
+                  <div class="checklist-progress">
+                    <span style="width: 50%"></span>
+                  </div>
+                  <ul class="checklist">
+                    <li class="done">
+                      <span class="check-icon">✓</span>Tarea 1 · Completado en
+                      preparación
+                    </li>
+                    <li class="done">
+                      <span class="check-icon">✓</span>Tarea 2 · Completado en
+                      preparación
+                    </li>
+                    <li>
+                      <span class="check-icon"></span>Tarea 3 · Pendiente de
+                      inicio
+                    </li>
+                    <li>
+                      <span class="check-icon"></span>Tarea 4 · Pendiente de
+                      inicio
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <aside class="session-sidebar">
+              <div class="control-card">
+                <p class="control-label">PANEL DE CONTROL</p>
+                <h3>Acciones de sesión</h3>
+                <p>
+                  Inicia inmediatamente la cuenta regresiva o ajusta los
+                  parámetros antes de arrancar.
+                </p>
+                <a class="start-now-btn" href="#">Iniciar sesión ahora</a>
+                <a class="edit-session-btn" href="detalle-sesion.html"
+                  >Editar sesión</a
+                >
+                <div class="session-meta-list">
+                  <div>
+                    <span>Hora de inicio prevista</span
+                    ><strong>11:00 AM</strong>
+                  </div>
+                  <div>
+                    <span>Hora de culminación</span><strong>12:55 PM</strong>
+                  </div>
+                  <div>
+                    <span>Dispositivo ancla</span
+                    ><strong>MacBook Pro M3</strong>
+                  </div>
+                  <div>
+                    <span>Modo de bloqueo web</span
+                    ><span class="tag tag-solid">Hard Shield</span>
+                  </div>
+                </div>
+                <div class="danger-card">
+                  <h3>Zona de riesgo</h3>
+                  <p>
+                    Si cancelas, la ranura horaria quedará libre y la tarea
+                    volverá a pendientes.
+                  </p>
+                  <button type="button">Cancelar sesión</button>
+                </div>
+              </div>
+
+              <div class="tip-card" style="margin-top: 22px">
+                <h3>Consejo de optimización</h3>
+                <p>
+                  Los primeros 12 minutos de cada intervalo presentan la mayor
+                  fricción cognitiva. Mantén tu editor abierto antes de hacer
+                  click en Iniciar sesión.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>

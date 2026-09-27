@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f6" />
+    <title>Dashboard · Flowcus</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body class="app-page dashboard-page">
+    <section class="workspace">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">FLOWCUS</a>
+        <nav class="side-nav" aria-label="Navegación principal">
+          <a class="selected" href="dashboard.html">Dashboard</a>
+          <a href="tareas.html">Tareas</a>
+          <a href="planificacion.html">Planificación</a>
+          <a href="#">Progreso</a>
+        </nav>
+        <div class="daily-goal">
+          <div><strong>OBJETIVO DIARIO</strong><strong>3/5 H</strong></div>
+          <span><i></i></span>
+        </div>
+        <button class="logout-button" type="button" id="logout">
+          ▷ CERRAR SESIÓN
+        </button>
+      </aside>
+      <main class="app-main">
+        <section class="dashboard-view">
+          <div class="profile-status" aria-label="Perfil activo">
+            <span class="profile-avatar" aria-hidden="true"></span
+            ><span>Perfil<br /><strong>ACTIVO</strong></span>
+          </div>
+
+          <div class="view-header">
+            <div>
+              <p class="view-eyebrow">Panel principal · Estación Deep Work</p>
+              <h1>Bienvenido de nuevo, Juan</h1>
+              <p>
+                Mantén el ritmo mental. Tienes 4 bloques estratégicos
+                proyectados para esta jornada.
+              </p>
+            </div>
+            <span class="view-pill">Jueves, 24 de octubre · Semana 43</span>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-card">
+              <h3>TIEMPO ENFOCADO HOY</h3>
+              <div class="stat-value">2h 15m</div>
+              <p class="stat-meta"><strong>↑ +18%</strong> vs. ayer</p>
+              <div class="stat-progress"><span style="width: 60%"></span></div>
+            </div>
+            <div class="stat-card">
+              <h3>CICLOS POMODORO</h3>
+              <div class="stat-value">3<small>/5</small></div>
+              <p class="stat-meta">60% de la meta diaria</p>
+              <div class="stat-dashes">
+                <span class="on"></span><span class="on"></span
+                ><span class="on"></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <h3>TAREAS PENDIENTES</h3>
+              <div class="stat-value">4<small>activas para hoy</small></div>
+              <p class="stat-meta">2 urgentes · 3 completadas</p>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="suggestion-card">
+              <div class="suggestion-copy">
+                <div class="suggestion-badges">
+                  <span class="tag tag-solid">Sugerencia inteligente</span
+                  ><span class="suggestion-subtitle"
+                    >Momento óptimo de atención</span
+                  >
+                </div>
+                <h2>Diseño del sistema de componentes</h2>
+                <p>
+                  Asignada a: Sesión de Enfoque Profundo · Estimado: 3 ciclos
+                  (75m)
+                </p>
+                <div class="suggestion-meta">
+                  <span>25 min trabajo</span><span>5 min descanso</span
+                  ><span>Silenciar notificaciones</span>
+                </div>
+              </div>
+              <div class="suggestion-action">
+                <a class="start-block" href="detalle-sesion.html"
+                  >Iniciar bloque de 75 min</a
+                >
+                <span class="suggestion-cycle">Ciclo 3 de la jornada</span>
+              </div>
+            </article>
+
+            <article class="performance-card">
+              <div class="performance-head">
+                <h3>RENDIMIENTO HOY</h3>
+                <span
+                  class="mini-toggle"
+                  role="switch"
+                  aria-checked="true"
+                  aria-label="Mostrar rendimiento"
+                ></span>
+              </div>
+              <div class="performance-ring" style="--pct: 75">
+                <div class="ring-inner">3/4<small>BLOQUES</small></div>
+              </div>
+              <p>
+                Estás a sólo 1 ciclo (25 min) de completar tu objetivo de
+                concentración diario.
+              </p>
+            </article>
+          </div>
+
+          <div class="priority-section">
+            <div class="section-head">
+              <h2>Tareas prioritarias de hoy</h2>
+              <div class="section-head-actions">
+                <span class="tag tag-info">4 pendientes</span>
+                <button
+                  class="filter-icon"
+                  type="button"
+                  aria-label="Filtrar tareas"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6h18M7 12h10M10 18h4" />
+                  </svg>
+                </button>
+                <a href="tareas.html">Ver todas →</a>
+              </div>
+            </div>
+            <div class="priority-list">
+              <div class="priority-item high">
+                <span class="priority-dot" aria-hidden="true"></span>
+                <div class="priority-body">
+                  <strong>Diseño del sistema de componentes</strong
+                  ><span>2 ciclos est. · Backend</span>
+                </div>
+                <div class="priority-tags">
+                  <span class="tag tag-danger">Alta</span
+                  ><span class="tag tag-info">En curso</span>
+                </div>
+              </div>
+              <div class="priority-item medium">
+                <span class="priority-dot" aria-hidden="true"></span>
+                <div class="priority-body">
+                  <strong>Documentar endpoints de autenticación</strong
+                  ><span>3 ciclos est. · Backend</span>
+                </div>
+                <div class="priority-tags">
+                  <span class="tag tag-warning">Media</span>
+                </div>
+              </div>
+              <div class="priority-item high">
+                <span class="priority-dot" aria-hidden="true"></span>
+                <div class="priority-body">
+                  <strong>Revisar pull request de componentes web</strong
+                  ><span>1 ciclo est. · Frontend</span>
+                </div>
+                <div class="priority-tags">
+                  <span class="tag tag-danger">Alta</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>
