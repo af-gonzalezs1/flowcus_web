@@ -29,19 +29,25 @@ if (signupForm) {
   });
 }
 
+// Grupos de botones tipo toggle (filtros, pestañas de vista, etc.): al hacer
+// clic se resalta el botón elegido dentro de su propio grupo. Sin lógica de
+// negocio real, sólo el estado visual activo/inactivo.
+document.querySelectorAll('.filters, .view-tabs').forEach((group) => {
+  const buttons = group.querySelectorAll(':scope > button');
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      buttons.forEach((item) => item.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+});
+
 const newTaskButton = document.querySelector('#new-task');
 if (newTaskButton) {
   newTaskButton.addEventListener('click', () => { window.location.href = 'crear-tarea.html'; });
   document.querySelector('#task-search').addEventListener('input', (event) => {
     const query = event.target.value.trim().toLocaleLowerCase('es');
     newTaskButton.hidden = Boolean(query) && !newTaskButton.textContent.toLocaleLowerCase('es').includes(query);
-  });
-
-  document.querySelectorAll('.filters button').forEach((button) => {
-    button.addEventListener('click', () => {
-      document.querySelectorAll('.filters button').forEach((item) => item.classList.remove('active'));
-      button.classList.add('active');
-    });
   });
 
   const loadTasks = () => {
