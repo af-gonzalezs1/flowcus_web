@@ -20,7 +20,7 @@ if (signupForm) {
       password.focus();
       return;
     }
-    window.location.href = 'tareas.html';
+    window.location.href = 'pages/tareas.html';
   });
 
   signupForm.addEventListener('input', () => {
@@ -110,7 +110,7 @@ if (taskForm) {
 }
 
 document.querySelectorAll('#logout').forEach((button) => {
-  button.addEventListener('click', () => { window.location.href = 'index.html'; });
+  button.addEventListener('click', () => { window.location.href = '../index.html'; });
 });
 
 function escapeHTML(value) {
