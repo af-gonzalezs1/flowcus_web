@@ -1,49 +1,291 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f6f6">
-  <title>Gestión de tareas · Flowcus</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/script.js" defer></script>
-</head>
-<body class="app-page task-page">
-  <section class="workspace">
-    <aside class="sidebar">
-      <a class="brand" href="tareas.html">FLOWCUS</a>
-      <nav class="side-nav" aria-label="Navegación principal">
-        <a href="dashboard.html">Dashboard</a>
-        <a class="selected" href="tareas.html">Tareas</a>
-        <a href="planificacion.html">Planificación</a>
-        <a href="#">Progreso</a>
-      </nav>
-      <div class="daily-goal"><div><strong>OBJETIVO DIARIO</strong><strong>3/5 H</strong></div><span><i></i></span></div>
-      <button class="logout-button" type="button" id="logout">▷ CERRAR SESIÓN</button>
-    </aside>
-    <main class="app-main">
-      <section class="tasks-view">
-        <div class="tasks-top-actions"><a class="top-create" href="crear-tarea.html">Crear</a><div class="profile-status"><span class="profile-avatar" aria-hidden="true">●</span><span>Perfil<br><strong>ACTIVO</strong></span></div></div>
-        <div class="tasks-header">
-          <h1>GESTIÓN DE TAREAS</h1>
-          <div class="task-stats"><span><i></i><b id="planned-count">0 TAREAS PLANIFICADAS</b></span><em></em><span class="cycle-stat">◉&nbsp; 0 Ciclos estim.</span><a class="create-task-button" href="crear-tarea.html">CREAR TAREA</a></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f6" />
+    <title>Gestión de tareas · Flowcus</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body class="app-page task-page">
+    <section class="workspace">
+      <aside class="sidebar">
+        <a class="brand" href="tareas.html">FLOWCUS</a>
+        <nav class="side-nav" aria-label="Navegación principal">
+          <a href="dashboard.html">Dashboard</a>
+          <a class="selected" href="tareas.html">Tareas</a>
+          <a href="planificacion.html">Planificación</a>
+          <a href="#">Progreso</a>
+        </nav>
+        <div class="daily-goal">
+          <div><strong>OBJETIVO DIARIO</strong><strong>3/5 H</strong></div>
+          <span><i></i></span>
         </div>
-        <div class="task-controls">
-          <div class="filters" role="tablist" aria-label="Filtrar tareas">
-            <button class="active" type="button" data-filter="all">TODAS <small>(0)</small></button>
-            <button type="button" data-filter="active">En curso <small>(0)</small></button>
-            <button type="button" data-filter="done">Completadas <small>(0)</small></button>
-            <button class="priority-filter" id="priority-filter" type="button">Prioridad Alta</button>
-          </div>
-          <div class="search-tools"><input id="task-search" type="search" placeholder="Buscar tarea..."><button type="button" class="filter-icon" aria-label="Filtrar tareas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M7 12h10M10 18h4"/></svg></button></div>
-        </div>
-        <div class="board-labels"><span>ORDEN DE PRIORIDAD</span><span>ARRASTRA PARA REORGANIZAR</span></div>
-        <button class="empty-task" type="button" id="new-task">
-          <i class="card-menu" aria-hidden="true">⋮</i><strong>CREAR TAREA</strong><span>Crear tareas para agregarlas a una sesión y<br>comenzar a cumplir tus metas</span>
+        <button class="logout-button" type="button" id="logout">
+          ▷ CERRAR SESIÓN
         </button>
-        <p class="tip">TIP: AGRUPA TAREAS SIMILARES EN UN MISMO BLOQUE<br>DE X MIN.</p>
-      </section>
-    </main>
-  </section>
-</body>
+      </aside>
+      <main class="app-main">
+        <section class="tasks-view">
+          <div class="tasks-top-actions">
+            <a class="top-create" href="crear-tarea.html">Crear</a>
+            <div class="profile-status">
+              <span class="profile-avatar" aria-hidden="true">●</span
+              ><span>Perfil<br /><strong>ACTIVO</strong></span>
+            </div>
+          </div>
+          <p class="view-eyebrow">Flujo de trabajo · Tareas activas</p>
+          <div class="tasks-header">
+            <h1>GESTIÓN DE TAREAS</h1>
+            <div class="task-stats">
+              <span><i></i><b>6 TAREAS PLANIFICADAS</b></span
+              ><em></em><span class="cycle-stat">◉&nbsp; 11 Ciclos estim.</span>
+            </div>
+          </div>
+          <div class="task-controls">
+            <div class="filters" role="tablist" aria-label="Filtrar tareas">
+              <button class="active" type="button">
+                TODAS <small>(6)</small>
+              </button>
+              <button type="button">En curso <small>(2)</small></button>
+              <button type="button">Completadas <small>(4)</small></button>
+              <button class="priority-filter" type="button">
+                Prioridad Alta
+              </button>
+            </div>
+            <div class="search-tools">
+              <input
+                id="task-search"
+                type="search"
+                placeholder="Buscar tarea..."
+              /><button
+                type="button"
+                class="filter-icon"
+                aria-label="Filtrar tareas"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 6h18M7 12h10M10 18h4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="tasks-board">
+            <div class="task-list-panel">
+              <div class="board-labels">
+                <span>ORDEN DE PRIORIDAD</span
+                ><span>ARRASTRA PARA REORGANIZAR</span>
+              </div>
+              <div class="task-list">
+                <article class="task-card selected" data-task="1">
+                  <input
+                    type="checkbox"
+                    aria-label="Marcar Tarea 1 como completada"
+                  />
+                  <div class="task-card-body">
+                    <strong>Tarea 1</strong>
+                    <span class="task-card-desc"
+                      >Descripción breve de la tarea...</span
+                    >
+                    <div class="task-card-tags">
+                      <span class="tag tag-danger">Alta</span
+                      ><span class="tag tag-neutral"
+                        ><i class="clock-dot" aria-hidden="true"></i>3 ciclos
+                        (75m)</span
+                      ><span class="tag tag-info">UI / UX</span>
+                    </div>
+                  </div>
+                  <i class="card-menu" aria-hidden="true">⋮</i>
+                </article>
+
+                <article class="task-card" data-task="2">
+                  <input
+                    type="checkbox"
+                    aria-label="Marcar Tarea 2 como completada"
+                  />
+                  <div class="task-card-body">
+                    <strong>Tarea 2</strong>
+                    <span class="task-card-desc"
+                      >Descripción breve de la tarea...</span
+                    >
+                    <div class="task-card-tags">
+                      <span class="tag tag-warning">Media</span
+                      ><span class="tag tag-neutral"
+                        ><i class="clock-dot" aria-hidden="true"></i>2 ciclos
+                        (50m)</span
+                      ><span class="tag tag-info">Estrategia</span>
+                    </div>
+                  </div>
+                  <i class="card-menu" aria-hidden="true">⋮</i>
+                </article>
+
+                <article class="task-card" data-task="3">
+                  <input
+                    type="checkbox"
+                    aria-label="Marcar Tarea 3 como completada"
+                  />
+                  <div class="task-card-body">
+                    <strong>Tarea 3</strong>
+                    <span class="task-card-desc"
+                      >Descripción breve de la tarea...</span
+                    >
+                    <div class="task-card-tags">
+                      <span class="tag tag-warning">Media</span
+                      ><span class="tag tag-neutral"
+                        ><i class="clock-dot" aria-hidden="true"></i>4 ciclos
+                        (100m)</span
+                      ><span class="tag tag-info">Planning</span>
+                    </div>
+                  </div>
+                  <i class="card-menu" aria-hidden="true">⋮</i>
+                </article>
+
+                <article class="task-card" data-task="4">
+                  <input
+                    type="checkbox"
+                    aria-label="Marcar Tarea 4 como completada"
+                  />
+                  <div class="task-card-body">
+                    <strong>Tarea 4</strong>
+                    <span class="task-card-desc"
+                      >Descripción breve de la tarea...</span
+                    >
+                    <div class="task-card-tags">
+                      <span class="tag tag-danger">Alta</span
+                      ><span class="tag tag-neutral"
+                        ><i class="clock-dot" aria-hidden="true"></i>2 ciclos
+                        (50m)</span
+                      ><span class="tag tag-info">Backend</span>
+                    </div>
+                  </div>
+                  <i class="card-menu" aria-hidden="true">⋮</i>
+                </article>
+
+                <article class="task-card done" data-task="5">
+                  <input
+                    type="checkbox"
+                    checked
+                    aria-label="Marcar Tarea 5 como pendiente"
+                  />
+                  <div class="task-card-body">
+                    <strong>Tarea 5</strong>
+                    <span class="task-card-desc"
+                      >Descripción breve de la tarea...</span
+                    >
+                    <div class="task-card-tags">
+                      <span class="tag tag-success">Completada</span
+                      ><span class="tag tag-neutral"
+                        ><i class="clock-dot" aria-hidden="true"></i>1 ciclo
+                        (25m)</span
+                      >
+                    </div>
+                  </div>
+                  <i class="card-menu" aria-hidden="true">⋮</i>
+                </article>
+
+                <article class="task-card done" data-task="6">
+                  <input
+                    type="checkbox"
+                    checked
+                    aria-label="Marcar Tarea 6 como pendiente"
+                  />
+                  <div class="task-card-body">
+                    <strong>Tarea 6</strong>
+                    <span class="task-card-desc"
+                      >Descripción breve de la tarea...</span
+                    >
+                    <div class="task-card-tags">
+                      <span class="tag tag-success">Completada</span
+                      ><span class="tag tag-neutral"
+                        ><i class="clock-dot" aria-hidden="true"></i>1 ciclo
+                        (25m)</span
+                      >
+                    </div>
+                  </div>
+                  <i class="card-menu" aria-hidden="true">⋮</i>
+                </article>
+              </div>
+              <p class="tip">
+                TIP: AGRUPA TAREAS SIMILARES EN UN MISMO BLOQUE<br />DE X MIN.
+              </p>
+            </div>
+
+            <aside class="task-detail-panel">
+              <div class="detail-header">
+                <div>
+                  <h2>Información de la tarea</h2>
+                  <span class="detail-meta">Creada hoy · ID-2049</span>
+                </div>
+                <div class="detail-actions">
+                  <button
+                    type="button"
+                    class="icon-button"
+                    aria-label="Duplicar tarea"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="9" y="9" width="12" height="12" rx="2" />
+                      <path d="M5 15V5a2 2 0 0 1 2-2h10" />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="icon-button"
+                    aria-label="Eliminar tarea"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"
+                      />
+                    </svg>
+                  </button>
+                  <a class="detail-edit" href="crear-tarea.html">Editar</a>
+                </div>
+              </div>
+
+              <p class="detail-label">Título de tarea</p>
+              <h3 class="detail-title">Tarea 1</h3>
+
+              <div class="detail-row">
+                <span class="detail-label"
+                  >Prioridad: <span class="tag tag-danger">Alta</span></span
+                >
+                <span class="detail-label"
+                  >Proyecto:
+                  <span class="tag tag-neutral">Flowcus Web</span></span
+                >
+              </div>
+              <p class="detail-label">
+                Fecha límite: <strong>Hoy, 18:00</strong>
+              </p>
+
+              <p class="detail-label">Descripción y contexto</p>
+              <p class="detail-description">Descripción de la tarea</p>
+
+              <div class="checklist-progress-row">
+                <span>Subtareas / Checklist</span
+                ><span>3 de 5 completadas (60%)</span>
+              </div>
+              <div class="checklist-progress">
+                <span style="width: 60%"></span>
+              </div>
+              <ul class="checklist">
+                <li class="done">
+                  <span class="check-icon">✓</span>Subtarea 1
+                </li>
+                <li class="done">
+                  <span class="check-icon">✓</span>Subtarea 2
+                </li>
+                <li class="done">
+                  <span class="check-icon">✓</span>Subtarea 3
+                </li>
+                <li><span class="check-icon"></span>Subtarea 4</li>
+                <li><span class="check-icon"></span>Subtarea 5</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </section>
+  </body>
 </html>

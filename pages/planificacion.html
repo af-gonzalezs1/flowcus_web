@@ -1,147 +1,211 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f6f6">
-  <title>Planificación de sesiones · Flowcus</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/script.js" defer></script>
-</head>
-<body class="app-page planning-page">
-  <section class="workspace">
-    <aside class="sidebar">
-      <a class="brand" href="dashboard.html">FLOWCUS</a>
-      <nav class="side-nav" aria-label="Navegación principal">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="tareas.html">Tareas</a>
-        <a class="selected" href="planificacion.html">Planificación</a>
-        <a href="#">Progreso</a>
-      </nav>
-      <div class="daily-goal"><div><strong>OBJETIVO DIARIO</strong><strong>3/5 H</strong></div><span><i></i></span></div>
-      <button class="logout-button" type="button" id="logout">▷ CERRAR SESIÓN</button>
-    </aside>
-    <main class="app-main">
-      <section class="planning-view">
-        <div class="top-actions">
-          <a class="top-create" href="detalle-sesion.html">Crear</a>
-          <div class="profile-status" aria-label="Perfil activo"><span class="profile-avatar" aria-hidden="true">●</span><span>Perfil<br><strong>ACTIVO</strong></span></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f6" />
+    <title>Planificación de sesiones · Flowcus</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body class="app-page planning-page">
+    <section class="workspace">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">FLOWCUS</a>
+        <nav class="side-nav" aria-label="Navegación principal">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="tareas.html">Tareas</a>
+          <a class="selected" href="planificacion.html">Planificación</a>
+          <a href="#">Progreso</a>
+        </nav>
+        <div class="daily-goal">
+          <div><strong>OBJETIVO DIARIO</strong><strong>3/5 H</strong></div>
+          <span><i></i></span>
         </div>
-
-        <div class="view-header">
-          <div>
-            <p class="view-eyebrow">Cronograma de alto rendimiento</p>
-            <h1>Planificación de sesiones</h1>
-            <p>Organiza y agenda tus bloques de trabajo profundo y concentración.</p>
-          </div>
-        </div>
-
-        <div class="planning-toolbar">
-          <div class="view-tabs" role="tablist" aria-label="Vista de planificación">
-            <button type="button" class="active">Lista</button>
-            <button type="button">Agenda semanal</button>
-          </div>
-          <a class="create-session-link" href="detalle-sesion.html">+ Crear sesión</a>
-        </div>
-
-        <div class="planning-search">
-          <input type="search" placeholder="Buscar sesión, tarea o proyecto...">
-          <span class="filters-label">Filtrar:</span>
-          <div class="filters" role="tablist" aria-label="Filtrar sesiones">
-            <button class="active" type="button">Todos <small>(6)</small></button>
-            <button type="button">Hoy <small>(3)</small></button>
-            <button type="button">Pendientes</button>
-            <button type="button">En preparación</button>
-          </div>
-        </div>
-
-        <div class="planning-layout">
-          <div class="planning-main">
-            <div class="day-heading">Hoy, 24 de octubre <span class="tag tag-neutral">3 bloques programados</span><span class="day-estimate">3.5 hrs estimadas</span></div>
-
-            <div class="session-list">
-              <article class="session-card">
-                <div class="session-top">
-                  <span class="tag tag-info">En preparación</span>
-                  <span class="session-time">09:30 AM (en 45 min)</span>
-                </div>
-                <h3>Sesión 1</h3>
-                <p class="session-meta">Tarea: Diseño del sistema de componentes · 4 ciclos × 25m · Descanso: 5m</p>
-                <div class="session-footer">
-                  <div class="session-tags"><span class="tag tag-info">Backend</span></div>
-                  <div class="session-actions">
-                    <a href="detalle-sesion.html">Ver detalle</a>
-                    <a href="detalle-sesion.html">Editar</a>
-                    <a class="start-now" href="detalle-sesion.html">Iniciar ahora</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="session-card">
-                <div class="session-top">
-                  <span class="tag tag-info">Pendiente</span>
-                  <span class="session-time">11:30 AM</span>
-                </div>
-                <h3>Sesión 2</h3>
-                <p class="session-meta">Tarea: Documentar endpoints de autenticación · 2 ciclos × 30m · Descanso: 10m</p>
-                <div class="session-footer">
-                  <div class="session-tags"><span class="tag tag-info">Backend</span><span class="tag tag-danger">Alta prioridad</span></div>
-                  <div class="session-actions">
-                    <a href="detalle-sesion.html">Ver detalle</a>
-                    <a href="detalle-sesion.html">Editar</a>
-                    <a class="start-now disabled" href="#">Iniciar ahora</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="session-card">
-                <div class="session-top">
-                  <span class="tag tag-info">Pendiente</span>
-                  <span class="session-time">04:00 PM</span>
-                </div>
-                <h3>Sesión 3</h3>
-                <p class="session-meta">Tarea: Revisar pull request de componentes web · 3 ciclos × 25m · Descanso: 5m</p>
-                <div class="session-footer">
-                  <div class="session-tags"><span class="tag tag-info">Frontend</span></div>
-                  <div class="session-actions">
-                    <a href="detalle-sesion.html">Ver detalle</a>
-                    <a href="detalle-sesion.html">Editar</a>
-                    <a class="start-now disabled" href="#">Iniciar ahora</a>
-                  </div>
-                </div>
-              </article>
+        <button class="logout-button" type="button" id="logout">
+          ▷ CERRAR SESIÓN
+        </button>
+      </aside>
+      <main class="app-main">
+        <section class="planning-view">
+          <div class="top-actions">
+            <a class="top-create" href="detalle-sesion.html">Crear</a>
+            <div class="profile-status" aria-label="Perfil activo">
+              <span class="profile-avatar" aria-hidden="true">●</span
+              ><span>Perfil<br /><strong>ACTIVO</strong></span>
             </div>
           </div>
 
-          <aside class="planning-sidebar">
-            <div class="summary-card">
-              <h3>Resumen del día</h3>
-              <div class="summary-stats">
-                <div><span>SESIONES</span><strong>3</strong></div>
-                <div><span>HORAS ENFOQUE</span><strong>3.5</strong></div>
+          <div class="view-header">
+            <div>
+              <p class="view-eyebrow">Cronograma de alto rendimiento</p>
+              <h1>Planificación de sesiones</h1>
+              <p>
+                Organiza y agenda tus bloques de trabajo profundo y
+                concentración
+              </p>
+            </div>
+          </div>
+
+          <div class="planning-toolbar">
+            <div
+              class="view-tabs"
+              role="tablist"
+              aria-label="Vista de planificación"
+            >
+              <button type="button" class="active">Lista</button>
+              <button type="button">Agenda Semanal</button>
+            </div>
+            <a class="create-session-link" href="detalle-sesion.html"
+              >Crear sesión</a
+            >
+          </div>
+
+          <div class="planning-search">
+            <input
+              type="search"
+              placeholder="Buscar sesión, tarea o proyecto..."
+            />
+            <span class="filters-label">Filtrar:</span>
+            <div class="filters" role="tablist" aria-label="Filtrar sesiones">
+              <button class="active" type="button">
+                Todos <small>(6)</small>
+              </button>
+              <button type="button">Hoy <small>(3)</small></button>
+              <button type="button">Pendientes</button>
+              <button type="button">En preparación</button>
+            </div>
+          </div>
+
+          <div class="planning-layout">
+            <div class="planning-main">
+              <div class="day-heading">
+                Hoy, 24 de octubre
+                <span class="tag tag-neutral">3 bloques programados</span
+                ><span class="day-estimate">3.5 hrs estimadas</span>
               </div>
-              <div class="capacity-row"><span>Capacidad de carga diaria</span><strong>70%</strong></div>
-              <div class="capacity-bar"><span style="width:70%"></span></div>
-              <p class="capacity-note">3.5h planificadas · Meta recomendada: 5.0h</p>
+
+              <div class="session-list">
+                <article class="session-card">
+                  <div class="session-top">
+                    <div class="session-top-left">
+                      <span class="tag tag-info">En preparación</span
+                      ><span class="session-time">09:30 AM (en 45 min)</span>
+                    </div>
+                    <div class="session-cycles">
+                      <strong>4 ciclos × 25m</strong><span>Descanso: 5m</span>
+                    </div>
+                  </div>
+                  <h3>Sesión 1</h3>
+                  <p class="session-meta">
+                    Tarea: Diseño del sistema de componentes
+                  </p>
+                  <div class="session-footer">
+                    <div class="session-tags">
+                      <span class="tag tag-info">Backend</span>
+                    </div>
+                    <div class="session-actions">
+                      <a href="detalle-sesion.html">Ver detalle</a>
+                      <a href="detalle-sesion.html">Editar</a>
+                      <a class="start-now" href="detalle-sesion.html"
+                        >Iniciar ahora</a
+                      >
+                    </div>
+                  </div>
+                </article>
+
+                <article class="session-card">
+                  <div class="session-top">
+                    <div class="session-top-left">
+                      <span class="tag tag-info">Pendiente</span
+                      ><span class="session-time">11:30 AM</span>
+                    </div>
+                    <div class="session-cycles">
+                      <strong>2 ciclos × 30m</strong><span>Descanso: 10m</span>
+                    </div>
+                  </div>
+                  <h3>Sesión 2</h3>
+                  <p class="session-meta">
+                    Tarea: Documentar endpoints de autenticación
+                  </p>
+                  <div class="session-footer">
+                    <div class="session-tags">
+                      <span class="tag tag-info">Backend</span
+                      ><span class="tag tag-danger">Alta prioridad</span>
+                    </div>
+                    <div class="session-actions">
+                      <a href="detalle-sesion.html">Ver detalle</a>
+                      <a href="detalle-sesion.html">Editar</a>
+                      <a class="start-now disabled" href="#">Iniciar ahora</a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="session-card">
+                  <div class="session-top">
+                    <div class="session-top-left">
+                      <span class="tag tag-info">Pendiente</span
+                      ><span class="session-time">04:00 PM</span>
+                    </div>
+                    <div class="session-cycles">
+                      <strong>3 ciclos × 25m</strong><span>Descanso: 5m</span>
+                    </div>
+                  </div>
+                  <h3>Sesión 3</h3>
+                  <p class="session-meta">
+                    Tarea: Revisar pull request de componentes web
+                  </p>
+                  <div class="session-footer">
+                    <div class="session-tags">
+                      <span class="tag tag-info">Frontend</span>
+                    </div>
+                    <div class="session-actions">
+                      <a href="detalle-sesion.html">Ver detalle</a>
+                      <a href="detalle-sesion.html">Editar</a>
+                      <a class="start-now disabled" href="#">Iniciar ahora</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
 
-            <div class="category-donut">
-              <div class="donut-ring"><span>9</span></div>
-              <ul class="donut-legend">
-                <li><i class="dot-1"></i>Categoría (4)<span>1.5h</span></li>
-                <li><i class="dot-2"></i>Diseño (2)<span>1h</span></li>
-                <li><i class="dot-3"></i>Docs (3)<span>1h</span></li>
-              </ul>
-            </div>
+            <aside class="planning-sidebar">
+              <div class="summary-card">
+                <h3>Resumen del día</h3>
+                <div class="summary-stats">
+                  <div><span>SESIONES</span><strong>3</strong></div>
+                  <div><span>HORAS ENFOQUE</span><strong>3.5</strong></div>
+                </div>
+                <div class="capacity-row">
+                  <span>Capacidad de carga diaria</span><strong>70%</strong>
+                </div>
+                <div class="capacity-bar"><span style="width: 70%"></span></div>
+                <p class="capacity-note">
+                  3.5h planificadas · Meta recomendada: 5.0h
+                </p>
+              </div>
 
-            <div class="tip-card">
-              <h3>Regla de los 90 minutos</h3>
-              <p>El cerebro humano mantiene su pico de concentración ultradiana durante bloques no mayores a 90 minutos. Procura no enlazar más de 3 ciclos consecutivos sin pausas largas.</p>
-            </div>
-          </aside>
-        </div>
-      </section>
-    </main>
-  </section>
-</body>
+              <div class="category-donut">
+                <div class="donut-ring"><span>9</span></div>
+                <ul class="donut-legend">
+                  <li><i class="dot-1"></i>Categoría (4)<span>1.5h</span></li>
+                  <li><i class="dot-2"></i>Diseño (2)<span>1h</span></li>
+                  <li><i class="dot-3"></i>Docs (3)<span>1h</span></li>
+                </ul>
+              </div>
+
+              <div class="tip-card">
+                <h3>Regla de los 90 minutos</h3>
+                <p>
+                  El cerebro humano mantiene su pico de concentración ultradiana
+                  durante bloques no mayores a 90 minutos. Procura no enlazar
+                  más de 3 ciclos consecutivos sin pausas largas.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </section>
+  </body>
 </html>
