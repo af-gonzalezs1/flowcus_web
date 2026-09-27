@@ -16,9 +16,8 @@ pages/
   dashboard.html                → Dashboard
   planificacion.html            → Planificación de sesiones
   detalle-sesion.html           → Detalle de sesión
-assets/
-  css/styles.css                → Estilos compartidos por todas las pantallas
-  js/script.js                  → Interacciones de UI (sin lógica de negocio)
+css/styles.css                 → Estilos compartidos por todas las pantallas
+js/script.js                   → Interacciones de UI (sin lógica de negocio)
 ```
 
 ## Pantallas maquetadas
