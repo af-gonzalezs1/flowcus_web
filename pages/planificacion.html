@@ -23,7 +23,10 @@
     </aside>
     <main class="app-main">
       <section class="planning-view">
-        <div class="profile-status" aria-label="Perfil activo"><span class="profile-avatar" aria-hidden="true">●</span><span>Perfil<br><strong>ACTIVO</strong></span></div>
+        <div class="top-actions">
+          <a class="top-create" href="detalle-sesion.html">Crear</a>
+          <div class="profile-status" aria-label="Perfil activo"><span class="profile-avatar" aria-hidden="true">●</span><span>Perfil<br><strong>ACTIVO</strong></span></div>
+        </div>
 
         <div class="view-header">
           <div>
@@ -43,6 +46,7 @@
 
         <div class="planning-search">
           <input type="search" placeholder="Buscar sesión, tarea o proyecto...">
+          <span class="filters-label">Filtrar:</span>
           <div class="filters" role="tablist" aria-label="Filtrar sesiones">
             <button class="active" type="button">Todos <small>(6)</small></button>
             <button type="button">Hoy <small>(3)</small></button>
@@ -124,9 +128,9 @@
             <div class="category-donut">
               <div class="donut-ring"><span>9</span></div>
               <ul class="donut-legend">
-                <li><i class="dot-1"></i>Categoría (4)</li>
-                <li><i class="dot-2"></i>Diseño (2)</li>
-                <li><i class="dot-3"></i>Docs (3)</li>
+                <li><i class="dot-1"></i>Categoría (4)<span>1.5h</span></li>
+                <li><i class="dot-2"></i>Diseño (2)<span>1h</span></li>
+                <li><i class="dot-3"></i>Docs (3)<span>1h</span></li>
               </ul>
             </div>
 

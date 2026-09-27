@@ -39,11 +39,13 @@
             <h3>TIEMPO ENFOCADO HOY</h3>
             <div class="stat-value">2h 15m</div>
             <p class="stat-meta"><strong>↑ +18%</strong> vs. ayer</p>
+            <div class="stat-progress"><span style="width:60%"></span></div>
           </div>
           <div class="stat-card">
             <h3>CICLOS POMODORO</h3>
             <div class="stat-value">3<small>/5</small></div>
             <p class="stat-meta">60% de la meta diaria</p>
+            <div class="stat-dashes"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></div>
           </div>
           <div class="stat-card">
             <h3>TAREAS PENDIENTES</h3>
@@ -55,16 +57,19 @@
         <div class="dashboard-grid">
           <article class="suggestion-card">
             <div class="suggestion-copy">
-              <span class="tag tag-solid">Sugerencia inteligente</span>
+              <div class="suggestion-badges"><span class="tag tag-solid">Sugerencia inteligente</span><span class="suggestion-subtitle">Momento óptimo de atención</span></div>
               <h2>Diseño del sistema de componentes</h2>
               <p>Asignada a: Sesión de Enfoque Profundo · Estimado: 3 ciclos (75m)</p>
               <div class="suggestion-meta"><span>25 min trabajo</span><span>5 min descanso</span><span>Silenciar notificaciones</span></div>
             </div>
-            <a class="start-block" href="detalle-sesion.html">Iniciar bloque de 75 min</a>
+            <div class="suggestion-action">
+              <a class="start-block" href="detalle-sesion.html">Iniciar bloque de 75 min</a>
+              <span class="suggestion-cycle">Ciclo 3 de la jornada</span>
+            </div>
           </article>
 
           <article class="performance-card">
-            <div class="performance-head"><h3>RENDIMIENTO HOY</h3></div>
+            <div class="performance-head"><h3>RENDIMIENTO HOY</h3><span class="mini-toggle" role="switch" aria-checked="true" aria-label="Mostrar rendimiento"></span></div>
             <div class="performance-ring" style="--pct:75">
               <div class="ring-inner">3/4<small>BLOQUES</small></div>
             </div>
@@ -75,7 +80,11 @@
         <div class="priority-section">
           <div class="section-head">
             <h2>Tareas prioritarias de hoy</h2>
-            <a href="tareas.html">Ver todas →</a>
+            <div class="section-head-actions">
+              <span class="tag tag-info">4 pendientes</span>
+              <button class="filter-icon" type="button" aria-label="Filtrar tareas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M7 12h10M10 18h4"/></svg></button>
+              <a href="tareas.html">Ver todas →</a>
+            </div>
           </div>
           <div class="priority-list">
             <div class="priority-item high">
